@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AdaptedVideoPlayer.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720"
+        MinWidth="1280" MinHeight="720"
+        x:Class="AdaptedVideoPlayer.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="This is a title / Ceci est un titre">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <!-- <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+    <Panel VerticalAlignment="Bottom" Margin="10">
+        <DockPanel HorizontalAlignment="Center">
+            <Button Content="Previous / Précédent" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0, 5, 0"/>
+            <Button Content="Play / Pause" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0, 5, 0"/>
+            <Button Content="Next / Suivant" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0, 5, 0"/>
+        </DockPanel>
+        <Button Content="Fullscreen Toggle" VerticalAlignment="Center" HorizontalAlignment="Right"></Button>
+    </Panel>
+</Window>
